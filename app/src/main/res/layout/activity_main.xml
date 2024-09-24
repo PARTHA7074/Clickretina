@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F5F6"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/materialToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Android Assignment"
+        app:titleTextColor="#FFFFFF" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/overallScoreLabelTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:textFontWeight="500"
+                android:alpha="0.4"
+                android:fontFamily="@font/inter"
+                android:letterSpacing="0.08"
+                android:textAllCaps="true"
+                android:text="overall score"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/group_51"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="14dp"
+                app:strokeColor="#FFFFFF"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/overallScoreLabelTV"
+                app:layout_constraintTop_toBottomOf="@+id/overallScoreLabelTV" >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:id="@+id/overall_sco"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Overall Score"
+                        android:textFontWeight="700"
+                        android:fontFamily="@font/inter"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="40dp"
+                        android:letterSpacing="0.01"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/average"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:textFontWeight="700"
+                        android:gravity="top"
+                        android:letterSpacing="0.08"
+                        android:text="AVERAGE"
+                        android:textColor="#F8BB00"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintStart_toStartOf="@+id/overall_sco"
+                        app:layout_constraintTop_toBottomOf="@+id/overall_sco" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="77dp"
+                        android:layout_marginTop="16.59dp"
+                        android:alpha="0.3"
+                        android:background="#F1F1F1"
+                        android:elevation="-1dp"
+                        app:layout_constraintTop_toBottomOf="@+id/group_47" />
+
+                    <TextView
+                        android:id="@+id/search_volu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:alpha="0.5"
+                        android:fontFamily="@font/inter"
+                        android:letterSpacing="0.01"
+                        android:text="Search Volume"
+                        android:textColor="#000000"
+                        android:textFontWeight="500"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/average"
+                        app:layout_constraintTop_toTopOf="@+id/view" />
+
+                    <TextView
+                        android:id="@+id/high"
+                        android:layout_width="31dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/inter"
+                        android:textFontWeight="700"
+                        android:letterSpacing="0.01"
+                        android:text="HIGH"
+                        android:textColor="#62C724"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/search_volu"
+                        app:layout_constraintTop_toBottomOf="@+id/search_volu" />
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/group_47"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:progress="53"
+                        android:rotation="90"
+                        app:indicatorColor="#F8BB00"
+                        app:indicatorSize="88.41dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/average"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/overall_sco"
+                        app:trackColor="#FAFAFA"
+                        app:trackThickness="10dp" />
+
+                    <TextView
+                        android:id="@+id/progressValueTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="26dp"
+                        android:letterSpacing="0.01"
+                        android:textFontWeight="700"
+                        android:text="53"
+                        android:fontFamily="@font/inter"
+                        android:textColor="#F8BB00"
+                        android:textSize="22sp"
+                        app:layout_constraintEnd_toEndOf="@+id/group_47"
+                        app:layout_constraintStart_toStartOf="@+id/group_47"
+                        app:layout_constraintTop_toTopOf="@+id/group_47" />
+
+                    <TextView
+                        android:id="@+id/progressUponTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:layout_marginTop="-5dp"
+                        android:letterSpacing="0.01"
+                        android:text="/100"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/progressValueTV"
+                        app:layout_constraintTop_toBottomOf="@+id/progressValueTV" />
+
+                    <TextView
+                        android:id="@+id/competition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textFontWeight="500"
+                        android:alpha="0.5"
+                        android:fontFamily="@font/inter"
+                        android:letterSpacing="0.01"
+                        android:text="Competition"
+                        android:textColor="#000000"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/search_volu"
+                        app:layout_constraintStart_toStartOf="@+id/group_47"
+                        app:layout_constraintTop_toTopOf="@+id/search_volu" />
+
+                    <TextView
+                        android:id="@+id/high2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter"
+                        android:letterSpacing="0.01"
+                        android:textFontWeight="700"
+                        android:text="HIGH"
+                        android:textColor="#F54241"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/competition"
+                        app:layout_constraintTop_toTopOf="@+id/high" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textFontWeight="500"
+                android:layout_marginTop="30dp"
+                android:alpha="0.4"
+                android:textAllCaps="true"
+                android:fontFamily="@font/inter"
+                android:letterSpacing="0.08"
+                android:text="Title"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/group_51"
+                app:layout_constraintTop_toBottomOf="@+id/group_51" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="1dp"
+                app:layout_constraintEnd_toEndOf="@+id/group_51"
+                app:layout_constraintStart_toStartOf="@+id/title"
+                app:layout_constraintTop_toBottomOf="@+id/title"
+                app:strokeColor="#FFFFFF">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:id="@+id/this_is_the"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/inter"
+                        android:letterSpacing="0.01"
+                        android:lineHeight="24sp"
+                        android:lineSpacingExtra="7sp"
+                        android:text="This is the title generated"
+                        android:textColor="#000000"
+                        android:textFontWeight="500"
+                        android:textSize="14sp"
+                        android:translationY="-3.53sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#FAFCFC"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        app:layout_constraintTop_toBottomOf="@+id/this_is_the">
+
+                        <TextView
+                            android:id="@+id/copy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:letterSpacing="0.01"
+                            android:text="Copy"
+                            android:textColor="#2F80ED"
+                            android:textFontWeight="590"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="41dp"
+                            android:background="#959595" />
+
+                        <TextView
+                            android:id="@+id/share"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:letterSpacing="0.01"
+                            android:text="Share"
+                            android:textColor="#2F80ED"
+                            android:textFontWeight="590"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:textFontWeight="500"
+                android:alpha="0.4"
+                android:fontFamily="@font/inter"
+                android:letterSpacing="0.08"
+                android:text="DESCription"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/materialCardView"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/descriptionCardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/materialCardView"
+                app:layout_constraintStart_toStartOf="@+id/description"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                app:layout_constraintVertical_bias="0.0"
+                app:strokeColor="#FFFFFF">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF">
+
+                    <TextView
+                        android:id="@+id/descriptionValueTV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="18dp"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/inter"
+                        android:letterSpacing="0.01"
+                        android:lineHeight="24sp"
+                        android:lineSpacingExtra="7sp"
+                        android:text="Lorpum ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus, sapien vel lacinia interdum, metus nunc interdum metus, eu eleifend mauris orci in enim. Sed eget mi sem."
+                        android:textColor="#000000"
+                        android:textFontWeight="500"
+                        android:textSize="14sp"
+                        android:translationY="-3.53sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="15dp"
+                        android:background="#FAFCFC"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        app:layout_constraintTop_toBottomOf="@+id/descriptionValueTV">
+
+                        <TextView
+                            android:id="@+id/copyDescriptionTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:letterSpacing="0.01"
+                            android:text="Copy"
+                            android:textColor="#2F80ED"
+                            android:textFontWeight="590"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="41dp"
+                            android:background="#959595" />
+
+                        <TextView
+                            android:id="@+id/shareDescriptionTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter"
+                            android:gravity="center"
+                            android:letterSpacing="0.01"
+                            android:text="Share"
+                            android:textColor="#2F80ED"
+                            android:textFontWeight="590"
+                            android:textSize="16sp" />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:contentDescription="Background design"
+        android:src="@drawable/wave_vector"
+        android:elevation="-5dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
