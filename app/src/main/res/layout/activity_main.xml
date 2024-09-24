@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F2F5F6"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/materialToolbar"
@@ -241,12 +241,13 @@
                     android:background="#FFFFFF">
 
                     <TextView
-                        android:id="@+id/this_is_the"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/titleValueTV"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="18dp"
                         android:layout_marginTop="18dp"
                         android:layout_marginEnd="18dp"
+                        android:gravity="start"
                         android:alpha="0.6"
                         android:fontFamily="@font/inter"
                         android:letterSpacing="0.01"
@@ -270,7 +271,7 @@
                         android:gravity="center"
                         android:orientation="horizontal"
                         android:weightSum="2"
-                        app:layout_constraintTop_toBottomOf="@+id/this_is_the">
+                        app:layout_constraintTop_toBottomOf="@+id/titleValueTV">
 
                         <TextView
                             android:id="@+id/copy"
@@ -335,7 +336,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="14dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="80dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -423,6 +424,16 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
 
     <ImageView
         android:layout_width="match_parent"
